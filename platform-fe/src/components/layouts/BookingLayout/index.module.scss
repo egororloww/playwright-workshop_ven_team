@@ -1,0 +1,26 @@
+@import '../../../assets/styles/mixins';
+
+.wrapper {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+
+  @include small-screen() {
+    grid-template-columns: minmax(20rem, 22.5rem) auto;
+    gap: 1.875rem;
+  }
+}
+
+.card {
+  margin-left: -1rem;
+  margin-right: -1rem;
+
+  @include small-screen() {
+    margin: 0;
+  }
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+}

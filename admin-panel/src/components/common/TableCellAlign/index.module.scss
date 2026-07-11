@@ -1,0 +1,14 @@
+.wrapper {
+  display: inline-block;
+  width: 100%;
+
+  &__center {
+    text-align: center;
+  }
+  &__left {
+    text-align: left;
+  }
+  &__right {
+    text-align: right;
+  }
+}

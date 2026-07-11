@@ -1,0 +1,56 @@
+@import '../../../../../assets/styles/mixins';
+
+.modal {
+  display: grid;
+  grid-template-columns: minmax(0, 30.7rem);
+  gap: 1rem;
+}
+.title {
+  justify-content: center;
+  text-align: center;
+  span {
+    text-transform: uppercase;
+  }
+}
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  &__title {
+    color: var(--color-a-100);
+    font-weight: 600;
+    line-height: normal;
+  }
+  &__list {
+    padding-left: 1.5rem;
+    list-style: disc;
+    li {
+      font-weight: 300;
+      line-height: 150%;
+    }
+  }
+}
+
+.cancel {
+  span {
+    background-image: var(--button-gradient) !important;
+  }
+
+  &:hover {
+    span {
+      background-image: var(--button-gradient-hover) !important;
+    }
+  }
+  &:active {
+    span {
+      background-image: var(--button-gradient-active) !important;
+    }
+  }
+}
+
+.caution {
+  color: var(--color-a-100);
+  font-weight: 600;
+  margin-bottom: 0.31rem;
+  font-size: 1rem;
+}

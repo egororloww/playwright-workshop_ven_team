@@ -1,0 +1,137 @@
+@import '../../assets/styles/mixins';
+
+.button {
+  display: flex;
+  padding: 0.6875rem 1rem;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.15);
+  width: max-content;
+  outline: unset;
+
+  &__disabled {
+    opacity: 0.4 !important;
+    cursor: default;
+    pointer-events: none;
+  }
+
+  span {
+    color: var(--color-a-100);
+    text-align: center;
+    line-height: normal;
+    width: max-content;
+  }
+
+  &__white {
+    span {
+      color: var(--color-a-100);
+    }
+  }
+
+  &__primary {
+    span {
+      color: var(--primary);
+    }
+  }
+
+  &__md {
+    height: 3rem;
+    span {
+      font-size: 1rem;
+      font-weight: 600;
+      text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    }
+  }
+  &__lg {
+    height: 3.25rem;
+    span {
+      font-size: 1.25rem;
+      font-weight: 700;
+      text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  &__textUppercase {
+    span {
+      text-transform: uppercase;
+    }
+  }
+
+  &__600 {
+    span {
+      font-weight: 600;
+    }
+  }
+  &__700 {
+    span {
+      font-weight: 700;
+    }
+  }
+
+  &__contained {
+    border: unset;
+    background-image: var(--button-gradient);
+    @media (hover: hover) {
+      &:hover {
+        background-image: var(--button-gradient-hover);
+      }
+
+      &:active {
+        background-image: var(--button-gradient-active);
+      }
+    }
+  }
+
+  &__outlined {
+    background-color: transparent;
+    border: 2px solid;
+    border-image: var(--button-gradient);
+    border-image-slice: 1;
+
+    @media (hover: hover) {
+      &:hover {
+        border-image: var(--button-gradient-hover);
+        border-image-slice: 1;
+      }
+
+      &:active {
+        border-image: var(--button-gradient-active);
+        border-image-slice: 1;
+      }
+    }
+  }
+
+  &__textGradient {
+    &_white {
+      span {
+        background-image: var(--text-gradient);
+        @include text-bgr-clip();
+      }
+    }
+    &_accent {
+      span {
+        background-image: var(--text-gradient-accent);
+        @include text-bgr-clip();
+      }
+      background-image: none !important;
+    }
+  }
+
+  &__text {
+    border: 0;
+    background: transparent;
+  }
+
+  &__string {
+    display: inline-block;
+    border: 0;
+    background: transparent;
+    padding: 0;
+    height: auto;
+    margin-left: 5px;
+  }
+
+  &__fullWidth {
+    width: 100%;
+  }
+}

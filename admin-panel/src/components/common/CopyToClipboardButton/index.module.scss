@@ -1,0 +1,10 @@
+.tooltip {
+  background-color: var(--clr-b-100) !important;
+  color: var(--clr-a-100) !important;
+  border-radius: 0 !important;
+  filter: drop-shadow(0px 0px 4px var(--clr-a-015));
+
+  &:global(.react-tooltip__show) {
+    opacity: 1;
+  }
+}

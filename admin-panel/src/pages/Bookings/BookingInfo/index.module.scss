@@ -1,0 +1,151 @@
+@import '../../../assets/styles/mixins';
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.header {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+  overflow: hidden;
+  white-space: nowrap;
+
+  &__navigation {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  &__booking {
+    gap: 0.5rem;
+    display: grid;
+    grid-template-columns: auto min-content;
+    align-items: center;
+  }
+
+  &__link,
+  &__icon {
+    display: none;
+    @include media-query(48.0625em) {
+      display: block;
+    }
+  }
+
+  &__icon {
+    flex: 0 0 1.25rem;
+  }
+
+  &__name {
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
+
+.data {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.calculation {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    @include media-query(30.0625em) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .block {
+      min-width: 10.45rem;
+    }
+  }
+}
+
+.info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(max(calc(25% - 12px), 268px), 1fr));
+  gap: 1rem;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  white-space: nowrap;
+  width: max-content;
+
+  &__redirect {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    svg {
+      display: flex;
+      flex: 0 0 1.25rem;
+      height: auto;
+    }
+  }
+
+  &__image {
+    width: 167px;
+    img {
+      width: 100%;
+      object-fit: cover;
+      object-position: left top;
+      transition: transform 0.3s;
+
+      @media (hover: hover) {
+        &:hover {
+          transform: scale(2.5);
+          z-index: 1;
+          position: relative;
+        }
+      }
+    }
+
+    &_card {
+      img {
+        aspect-ratio: 1.57;
+      }
+    }
+    &_page {
+      img {
+        aspect-ratio: 0.88;
+      }
+    }
+  }
+}
+
+.documents {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  .block {
+    width: 167px;
+  }
+
+  @include media-query(30.0625em) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.services {
+  display: flex;
+  flex-direction: column;
+  @include media-query(30.0625em) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  gap: 2rem;
+}

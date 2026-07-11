@@ -1,0 +1,22 @@
+@import '../../assets/styles/mixins';
+
+.line {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+
+  &_right,
+  &_both {
+    @include line(after) {
+      flex-grow: 1;
+    }
+  }
+  &_left,
+  &_both {
+    @include line(before) {
+      flex-grow: 1;
+      transform: scaleX(-1);
+    }
+  }
+}

@@ -1,0 +1,12 @@
+<svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="EFG_Check_icon 1">
+<path id="Vector" d="M13.0166 19.0666L21.9999 28.05L38.8666 5.86664" stroke="#E98C00" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M38.8666 17.6C39.2332 19.0667 39.5999 20.7167 39.5999 22.3667C39.5999 32.0833 31.7166 39.9667 21.9999 39.9667C12.2832 39.9667 4.3999 32.0833 4.3999 22.3667C4.3999 12.65 12.2832 4.76666 21.9999 4.76666C24.7499 4.76666 27.4999 5.5 29.8832 6.6" stroke="url(#paint0_linear_1462_12169)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_1462_12169" x1="25.6622" y1="40.3669" x2="18.2456" y2="4.16973" gradientUnits="userSpaceOnUse">
+<stop stop-color="#3E3E3E"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+</defs>
+</svg>

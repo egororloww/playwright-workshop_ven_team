@@ -1,0 +1,84 @@
+@import '../../assets/styles/mixins';
+
+.button {
+  width: max-content;
+  outline: unset;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+
+  &__disabled {
+    opacity: 0.4;
+    cursor: default;
+    pointer-events: none;
+  }
+
+  span {
+    text-align: center;
+    background-image: var(--button-gradient);
+    @include text-bgr-clip();
+  }
+
+  &:hover {
+    span {
+      background-image: var(--button-gradient-hover);
+      @include text-bgr-clip();
+    }
+
+    svg {
+      & :global(.main-stop) {
+        stop-color: #ffc533;
+      }
+      & :global(.alt-stop) {
+        stop-color: #ed8d33;
+      }
+    }
+  }
+  &:active {
+    span {
+      background-image: var(--button-gradient-active);
+      @include text-bgr-clip();
+    }
+    svg {
+      & :global(.main-stop) {
+        stop-color: #ffb800;
+      }
+      & :global(.alt-stop) {
+        stop-color: #e97000;
+      }
+    }
+  }
+
+  &__textGradient {
+    &_accent {
+      span {
+        background: linear-gradient(90deg, #e98c00 -0.4%, rgba(233, 140, 0, 0.4) 99.6%);
+        @include text-bgr-clip();
+      }
+    }
+  }
+
+  &__textUppercase {
+    span {
+      text-transform: uppercase;
+    }
+  }
+
+  &__500 {
+    span {
+      font-weight: 500;
+    }
+  }
+  &__600 {
+    span {
+      font-weight: 600;
+    }
+  }
+  &__700 {
+    span {
+      font-weight: 700;
+    }
+  }
+}

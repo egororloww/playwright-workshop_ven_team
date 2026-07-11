@@ -1,0 +1,38 @@
+@import '../../../assets/styles/mixins';
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: -1rem -1rem 0 -1rem;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15);
+  background-color: var(--clr-b-100);
+  position: sticky;
+  top: 0;
+  max-width: 100dvw;
+  z-index: 1000;
+  @include media-query(48.0625em) {
+    background-color: var(--clr-d-100);
+    padding: 1rem;
+    margin-bottom: -1rem;
+    box-shadow: none;
+  }
+  &__button {
+    background-color: var(--clr-a-100);
+    padding: 0.75rem;
+    @include media-query(48.0625em) {
+      display: none;
+    }
+  }
+}
+
+.drawer,
+.overlay {
+  @include media-query(48.0625em) {
+    display: none !important;
+  }
+}
+
+.overlay {
+  background-color: var(--clr-a-100) !important;
+}

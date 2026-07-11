@@ -1,0 +1,20 @@
+<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="EFG_ico_15">
+<g id="Group">
+<path id="Vector" d="M14.9999 28.62C7.48988 28.62 1.37988 22.51 1.37988 15C1.37988 7.49 7.48988 1.38 14.9999 1.38C22.5099 1.38 28.6199 7.49 28.6199 15C28.6199 22.51 22.5099 28.62 14.9999 28.62ZM14.9999 2.38001C8.03988 2.38001 2.37988 8.04 2.37988 15C2.37988 21.96 8.03988 27.62 14.9999 27.62C21.9599 27.62 27.6199 21.96 27.6199 15C27.6199 8.04 21.9599 2.38001 14.9999 2.38001Z" fill="#E98C00"/>
+<path id="Vector_2" d="M8.61993 22.99C8.35993 22.99 8.10993 22.89 7.90993 22.7C7.51993 22.31 7.51993 21.68 7.90993 21.29L21.1999 7.99001C21.5899 7.60001 22.2199 7.60001 22.6099 7.99001C22.9999 8.38001 22.9999 9.01001 22.6099 9.40001L9.32993 22.69C9.13993 22.89 8.87993 22.99 8.61993 22.99Z" fill="url(#paint0_linear_1_2891)"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_1_2891" x1="7.62493" y1="15.3433" x2="22.9091" y2="15.3433" gradientUnits="userSpaceOnUse">
+<stop offset="1.38522e-07" stop-color="#666666"/>
+<stop offset="0.0256" stop-color="#6E6E6E"/>
+<stop offset="0.1875" stop-color="#9A9A9A"/>
+<stop offset="0.3513" stop-color="#BEBEBE"/>
+<stop offset="0.5146" stop-color="#DBDBDB"/>
+<stop offset="0.6773" stop-color="#EFEFEF"/>
+<stop offset="0.8394" stop-color="#FBFBFB"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+</defs>
+</svg>

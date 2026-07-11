@@ -1,0 +1,32 @@
+:root {
+  --clr-a-100: rgba(8, 12, 15, 1);
+  --clr-a-080: rgba(8, 12, 15, 0.8);
+  --clr-a-060: rgba(8, 12, 15, 0.6);
+  --clr-a-040: rgba(8, 12, 15, 0.4);
+  --clr-a-030: rgba(8, 12, 15, 0.3);
+  --clr-a-020: rgba(8, 12, 15, 0.2);
+  --clr-a-015: rgba(8, 12, 15, 0.15);
+  --clr-a-010: rgba(8, 12, 15, 0.1);
+  --clr-a-008: rgba(8, 12, 15, 0.08);
+  --clr-a-005: rgba(8, 12, 15, 0.05);
+
+  --clr-b-100: rgba(255, 255, 255, 1);
+
+  --clr-c-100: rgba(255, 92, 0, 1);
+  --clr-c-020: rgba(255, 92, 0, 0.2);
+  --clr-c-010: rgba(255, 92, 0, 0.1);
+
+  --clr-d-100: rgba(250, 251, 255, 1);
+
+  --clr-e-100: rgba(233, 140, 0, 1);
+  --bsh-a-1: 0px 20px 30px 0px rgba(21, 23, 61, 0.07);
+
+  --btn-bgr-grad: linear-gradient(180deg, #ffb800 0%, #e97000 100%);
+  --btn-bgr-grad-hover: linear-gradient(180deg, #ffc533 0%, #ed8d33 100%);
+  --btn-bgr-grad-active: linear-gradient(180deg, #e5a500 0%, #d16500 100%);
+
+  --btn-menu-grad-active: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+
+  --btn-bsh: 0px 4px 16px 0px rgba(0, 0, 0, 0.15);
+  --ptn-t-sh: 0px 1px 3px rgba(0, 0, 0, 0.25);
+}

@@ -1,0 +1,41 @@
+.badge {
+  padding: 0.25rem 0.5rem;
+  text-align: center;
+  width: max-content;
+  height: min-content;
+  text-transform: capitalize;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: normal;
+  border: 1px solid;
+
+  &__fullWidth {
+    width: 100%;
+  }
+
+  &__new {
+    color: #54a8d7 !important;
+    border-color: #54a8d7;
+    background-color: rgba(84, 168, 215, 0.2);
+  }
+  &__completed {
+    color: #008f28 !important;
+    border-color: #008f28;
+    background-color: rgba(0, 143, 40, 0.2);
+  }
+  &__declined {
+    color: #953c3c !important;
+    border-color: #953c3c;
+    background-color: rgba(149, 60, 60, 0.2);
+  }
+  &__accepted {
+    color: #bba145 !important;
+    border-color: #bba145;
+    background-color: rgba(187, 161, 69, 0.2);
+  }
+  &__canceled {
+    color: #7c7c7c !important;
+    border-color: #7c7c7c;
+    background-color: rgba(124, 124, 124, 0.2);
+  }
+}

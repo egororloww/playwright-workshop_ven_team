@@ -1,0 +1,13 @@
+@import '../../../assets/styles/mixins';
+.wrapper {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  grid-template-rows: max-content;
+
+  @include media-query(48.0625em) {
+    grid-template-columns: 16.925rem 1fr;
+    grid-template-rows: auto;
+  }
+}

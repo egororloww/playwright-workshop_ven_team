@@ -1,0 +1,81 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.account {
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 400;
+  line-height: normal;
+
+  button {
+    color: var(--primary);
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  &__row {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  }
+}
+
+.files {
+  &__title {
+    color: var(--color-a-100);
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+  &__restrictions {
+    margin-bottom: 0.75rem;
+  }
+  &__row {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    @media (min-width: 30.0625em) {
+      flex-direction: row;
+    }
+  }
+  &__contacts {
+    margin-top: 0.5rem;
+
+    a {
+      color: var(--primary);
+      font-weight: 700;
+      line-height: normal;
+    }
+  }
+}
+
+.file {
+  &__title {
+    color: var(--color-a-100);
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 0.3rem;
+  }
+}

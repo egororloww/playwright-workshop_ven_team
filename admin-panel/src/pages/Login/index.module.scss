@@ -1,0 +1,9 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 1.5rem;
+  background: var(--clr-b-100);
+  box-shadow: var(--bsh-a-1);
+  width: 100%;
+}

@@ -1,0 +1,15 @@
+@import '../../assets/styles/mixins';
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.title {
+  max-width: min-content;
+  text-align: center;
+  @include small-screen() {
+    max-width: fit-content;
+  }
+}

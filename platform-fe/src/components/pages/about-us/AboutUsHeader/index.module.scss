@@ -1,0 +1,13 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  &__description {
+    text-align: center;
+    max-width: 46.875rem;
+    width: 100%;
+    color: var(--color-a-100);
+    margin: 0 auto;
+  }
+}

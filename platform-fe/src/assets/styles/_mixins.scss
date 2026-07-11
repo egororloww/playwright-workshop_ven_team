@@ -1,0 +1,58 @@
+@mixin text-bgr-clip() {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin line($position) {
+  &:#{$position} {
+    content: '';
+    display: block;
+    border-top: 0.0625rem solid;
+    border-image: var(--line-inline-gradient);
+    border-image-slice: 1;
+    filter: blur(1px);
+    @content;
+  }
+}
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@mixin small-screen {
+  @media screen and (min-width: 48.0625rem) {
+    @content;
+  }
+}
+
+@mixin scrollbar {
+  &::-webkit-scrollbar {
+    width: 0.1875rem;
+  }
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 0.1875rem var(--color-a-000);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(217, 217, 217, 0.4);
+  }
+}
+
+@mixin card-layout {
+  border: 1px solid;
+  border-image: linear-gradient(180deg, hsla(0, 0%, 100%, 0.2) 0%, hsla(0, 0%, 100%, 0) 100%);
+  border-image-slice: 1;
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
+  border-bottom: 0;
+}

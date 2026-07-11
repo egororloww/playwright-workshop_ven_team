@@ -1,0 +1,10 @@
+@import './assets/styles/colors';
+@import './assets/styles/layout';
+@import './assets/styles/reset';
+
+body {
+  font-family: var(--main-font);
+  font-size: 0.875rem;
+  color: var(--color-a-060);
+  background-color: var(--background-100);
+}

@@ -1,0 +1,21 @@
+@import '../../assets/styles/mixins';
+
+.title {
+  display: flex;
+  align-items: center;
+
+  &__content {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: normal;
+
+    background: var(--text-gradient);
+    @include text-bgr-clip();
+  }
+
+  &_uppercase {
+    .title__content {
+      text-transform: uppercase;
+    }
+  }
+}

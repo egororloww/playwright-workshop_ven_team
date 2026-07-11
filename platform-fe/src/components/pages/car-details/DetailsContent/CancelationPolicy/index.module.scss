@@ -1,0 +1,29 @@
+@import '../../../../../assets/styles/mixins';
+
+.modal {
+  display: grid;
+  grid-template-columns: minmax(0, 30.7rem);
+  gap: 1rem;
+}
+.title {
+  justify-content: center;
+  text-align: center;
+  span {
+    text-transform: uppercase;
+  }
+}
+.block {
+  &__title {
+    color: var(--color-a-100);
+    font-weight: 600;
+    line-height: normal;
+  }
+  &__list {
+    padding-left: 1.5rem;
+    list-style: disc;
+    li {
+      font-weight: 300;
+      line-height: 150%;
+    }
+  }
+}

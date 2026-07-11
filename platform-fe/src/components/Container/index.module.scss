@@ -1,0 +1,20 @@
+@import '../../assets/styles/mixins';
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+
+  &__xlg {
+    max-width: 90rem;
+  }
+  &__lg {
+    max-width: 74.25rem;
+  }
+  &__md {
+    max-width: 58.9375rem;
+  }
+
+  @include small-screen() {
+    padding: 0 1.5rem;
+  }
+}

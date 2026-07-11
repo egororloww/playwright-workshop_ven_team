@@ -1,0 +1,90 @@
+@import '../../../assets/styles/mixins';
+
+.input {
+  position: relative;
+  width: 167px;
+  height: 104px;
+  border: 1px solid var(--clr-a-030);
+  @media (max-width: 480px) {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2.057 / 1;
+  }
+  &:hover {
+    border-color: var(--clr-a-060);
+  }
+  &__card {
+    .label {
+      aspect-ratio: 1.59;
+    }
+  }
+  &__page {
+    .label {
+      aspect-ratio: 0.83;
+    }
+  }
+
+  .label {
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    &__error {
+      border: 1px solid;
+      border-color: var(--error) !important;
+    }
+
+    .image {
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+    .upload {
+      width: 100%;
+      height: 100%;
+      padding: 0rem 0.53694rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 0.975px solid rgba(255, 255, 255, 0.4);
+      background: rgba(255, 255, 255, 0.03);
+      cursor: pointer;
+    }
+  }
+  .button {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid var(--clr-e-100);
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.25);
+    svg {
+      display: flex;
+      width: 1.0625rem;
+      height: 1.0625rem;
+      fill: #E98C00;
+    }
+  }
+}
+
+.error {
+  color: #ff5c00;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: normal;
+  display: block;
+}

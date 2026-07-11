@@ -1,0 +1,52 @@
+@import '../../assets/styles/mixins';
+.marquee {
+  --gap: 3.75rem;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 5rem;
+    z-index: 1;
+  }
+
+  &::before {
+    left: -0.5rem;
+    background: linear-gradient(to right, hsl(206, 30%, 5%) 0%, hsla(206, 30%, 5%, 0) 100%);
+  }
+  &::after {
+    right: -0.5rem;
+    background: linear-gradient(to left, hsl(206, 30%, 5%) 0%, hsla(206, 30%, 5%, 0) 100%);
+  }
+
+  &__list {
+    will-change: transform;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+    gap: var(--gap);
+    min-width: 100%;
+    animation: scroll 30s linear infinite;
+
+    @media (prefers-reduced-motion: reduce) {
+      animation-play-state: paused !important;
+    }
+  }
+
+  @include keyframes(scroll) {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+}

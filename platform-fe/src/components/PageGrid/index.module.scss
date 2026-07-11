@@ -1,0 +1,12 @@
+@import '../../assets/styles/mixins';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  position: relative;
+
+  @include small-screen() {
+    gap: 5rem;
+  }
+}

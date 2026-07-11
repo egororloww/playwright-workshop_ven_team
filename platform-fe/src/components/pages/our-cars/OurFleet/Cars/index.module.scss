@@ -1,0 +1,20 @@
+@import '../../../../../assets/styles/mixins';
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16.5rem, 1fr));
+  column-gap: 1.875rem;
+  row-gap: 2.5rem;
+  grid-auto-rows: 1fr;
+  justify-items: center;
+
+  @include small-screen() {
+    row-gap: 3.125rem;
+  }
+
+  &__item {
+    justify-items: center;
+    max-width: 17.5rem;
+    justify-self: center;
+  }
+}

@@ -1,0 +1,33 @@
+@import '../../assets/styles/mixins';
+
+.header {
+  position: relative;
+
+  @include media-query(48.0625em) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.actions {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.button {
+  &__desktop {
+    display: none;
+    @include media-query(48.0625em) {
+      display: flex;
+    }
+  }
+  &__mobile {
+    display: flex;
+    @include media-query(48.0625em) {
+      display: none;
+    }
+  }
+}

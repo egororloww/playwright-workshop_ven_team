@@ -1,0 +1,99 @@
+@import '../../../../../assets/styles/mixins';
+
+.button {
+  display: none;
+
+  @include small-screen() {
+    display: flex;
+    width: max-content;
+    margin-left: auto;
+    height: 3rem;
+    padding: 0.6875rem 0.5rem;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    width: max-content;
+    padding: 0.6875rem 1rem;
+    gap: 0.5rem;
+    display: flex;
+    align-items: center;
+    span {
+      background-image: var(--text-gradient);
+      @include text-bgr-clip();
+    }
+    svg {
+      display: flex;
+      transform: scaleY(-1);
+      transition: transform var(--main-transition);
+    }
+
+    position: relative;
+
+    &::after {
+      opacity: 0;
+      content: '';
+      position: absolute;
+      display: block;
+      height: 1px;
+      width: 100%;
+      top: 100%;
+      left: 0;
+      background-image: linear-gradient(90deg, hsla(36, 99%, 45%, 0), hsla(36, 99%, 45%, 1), hsla(36, 99%, 45%, 0));
+      transition: opacity var(--main-transition);
+    }
+    &:hover,
+    &:global(.szh-menu-button--open),
+    &__active,
+    &:active {
+      &::after {
+        opacity: 1;
+      }
+    }
+    &:active {
+      span {
+        background-image: linear-gradient(90deg, var(--color-a-080) 0%, var(--color-a-080) 100%);
+      }
+    }
+
+    &__active {
+      span {
+        background-image: linear-gradient(90deg, var(--color-a-100) 0%, var(--color-a-100) 100%);
+      }
+    }
+    &:global(.szh-menu-button--open) {
+      span {
+        background-image: linear-gradient(90deg, var(--color-a-100) 0%, var(--color-a-100) 100%);
+      }
+
+      svg {
+        transform: scaleY(1);
+      }
+    }
+  }
+}
+
+.menu {
+  border-radius: 0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%), #080c0f;
+  padding-top: 0.5re;
+  padding-bottom: 0.5rem;
+
+  &__item {
+    color: var(--color-a-100);
+    font-weight: 500;
+    line-height: normal;
+    padding: 0.5rem 1rem;
+    transition: color var(--main-transition);
+
+    a {
+      width: 100%;
+    }
+
+    &:hover,
+    &:has(:global(.active)) {
+      background-color: #222628;
+    }
+  }
+}

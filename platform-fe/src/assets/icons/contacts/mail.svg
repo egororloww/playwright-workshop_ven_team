@@ -1,0 +1,12 @@
+<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="EFG_Mail_icon">
+<path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M2.69995 17.3001V8.8001C2.69995 7.6001 3.69995 6.6001 4.89995 6.6001H19.2999C20.4999 6.6001 21.5 7.6001 21.5 8.8001V17.3001C21.5 18.5001 20.4999 19.5001 19.2999 19.5001H4.89995C3.69995 19.5001 2.69995 18.5001 2.69995 17.3001Z" stroke="url(#paint0_linear_1544_15053)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M5.59998 9.7998L11.9 15.5998L18.6 9.7998" stroke="#E98C00" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_1544_15053" x1="12.0744" y1="19.9855" x2="12.0744" y2="6.1301" gradientUnits="userSpaceOnUse">
+<stop stop-color="#3E3E3E"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+</defs>
+</svg>

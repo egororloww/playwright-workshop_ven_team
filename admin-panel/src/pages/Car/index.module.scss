@@ -1,0 +1,26 @@
+@import '../../assets/styles/mixins';
+.header {
+  display: flex;
+  gap: 0.375rem;
+  align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+
+  &__link,
+  &__icon {
+    display: none;
+    @include media-query(48.0625em) {
+      display: block;
+    }
+  }
+
+  &__icon {
+    flex: 0 0 1.25rem;
+  }
+
+  &__name {
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}

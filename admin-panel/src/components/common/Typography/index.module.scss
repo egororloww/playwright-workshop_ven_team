@@ -1,0 +1,79 @@
+@import '../../../assets/styles/mixins';
+
+.text {
+  line-height: normal;
+  &__color {
+    &_dark {
+      color: var(--clr-a-100);
+
+      &-040 {
+        color: var(--clr-a-040);
+      }
+      &-060 {
+        color: var(--clr-a-060);
+      }
+      &-080 {
+        color: var(--clr-a-080);
+      }
+    }
+    &_white {
+      color: var(--clr-b-100);
+    }
+
+    &_accent {
+      color: var(--clr-c-100);
+    }
+  }
+
+  &__size {
+    &_sm {
+      font-size: 0.75rem;
+    }
+    &_md {
+      font-size: 0.875rem;
+    }
+    &_lg {
+      font-size: 1.5rem;
+    }
+    &_xlg {
+      font-size: 2rem;
+    }
+    &_regular {
+      font-size: 1rem;
+    }
+  }
+
+  &__weight {
+    &_400 {
+      font-weight: 400;
+    }
+    &_500 {
+      font-weight: 500;
+    }
+    &_600 {
+      font-weight: 600;
+    }
+    &_700 {
+      font-weight: 700;
+    }
+  }
+
+  &__align {
+    &_center {
+      text-align: center;
+    }
+    &_left {
+      text-align: left;
+    }
+    &_right {
+      text-align: right;
+    }
+  }
+  &__uppercase {
+    text-transform: uppercase;
+  }
+
+  &__underline {
+    text-decoration: underline;
+  }
+}

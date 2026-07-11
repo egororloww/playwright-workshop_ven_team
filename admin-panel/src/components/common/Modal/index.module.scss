@@ -1,0 +1,47 @@
+@import '../../../assets/styles/mixins';
+
+.modal {
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: var(--bsh-a-1);
+  background-color: var(--clr-b-100);
+  max-width: calc(100vw - 2rem);
+  max-height: calc(100dvh - 2rem);
+  width: max-content;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  overflow: auto;
+  outline: unset;
+
+  & .close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+
+    svg {
+      display: flex;
+    }
+  }
+}
+
+.backdrop {
+  background-color: var(--clr-a-020);
+  z-index: 9998;
+  position: fixed;
+  inset: 0;
+  opacity: 0;
+
+  animation: fadeIn 100ms cubic-bezier(0, 0, 1, 0) forwards;
+}
+
+@include keyframes(fadeIn) {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

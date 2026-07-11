@@ -1,0 +1,123 @@
+@import '../../../assets/styles/mixins';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  container-type: inline-size;
+  container-name: car-info;
+
+  @include media-query(48.0625em) {
+    gap: 2rem;
+  }
+}
+
+.description {
+  flex-direction: column;
+  gap: 1rem;
+  display: flex;
+
+  @container car-info (min-width: 48.0625em) {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+
+  &__images {
+    flex-shrink: 0;
+  }
+
+  .images {
+    display: flex;
+    gap: 0.25rem;
+
+    &__image {
+      border: 1px solid var(--clr-a-030);
+      width: 7.9375rem;
+      height: max-content;
+
+      img {
+        width: 100%;
+        aspect-ratio: 1.5875;
+        object-position: center;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  &__row {
+    &:nth-child(1),
+    &:nth-child(2) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .block {
+    white-space: nowrap;
+  }
+
+  @include media-query(30.0625em) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    &__row {
+      flex: 1 0 0;
+      &:nth-child(1) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+      }
+      &:nth-child(2) {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+      }
+    }
+  }
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+}
+
+.gallery {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+
+  @include media-query(30.0625em) {
+    flex-direction: row;
+  }
+
+  &__image {
+    border: 1px solid var(--clr-a-030);
+    width: 7.9375rem;
+    height: max-content;
+
+    img {
+      width: 100%;
+      aspect-ratio: 1.5875;
+      object-position: center;
+      object-fit: cover;
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 0.375rem;
+    flex-wrap: wrap;
+  }
+}

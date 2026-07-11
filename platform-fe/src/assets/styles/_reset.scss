@@ -1,0 +1,42 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background-color: transparent;
+  outline: unset;
+  border: unset;
+  cursor: pointer;
+}
+
+a,
+button {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+input {
+  font-family: inherit;
+  &::placeholder {
+    font-family: inherit;
+  }
+}
+
+img {
+  display: flex;
+  max-width: 100%;
+  height: auto;
+}

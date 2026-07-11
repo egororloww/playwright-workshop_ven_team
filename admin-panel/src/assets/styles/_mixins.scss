@@ -1,0 +1,33 @@
+@mixin media-query($media) {
+  @media (min-width: $media) {
+    @content;
+  }
+}
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@mixin scrollbar {
+  &::-webkit-scrollbar {
+    width: 0.1875rem;
+    height: 0.1875rem;
+  }
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 0.1875rem var(--clr-b-100);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--clr-a-040);
+  }
+}

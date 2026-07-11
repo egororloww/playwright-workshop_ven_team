@@ -1,0 +1,30 @@
+@import '../../../../assets/styles/mixins';
+.wrapper {
+  height: max-content;
+  @include media-query(48.0625em) {
+    height: auto;
+  }
+  &__content {
+    position: static;
+    height: 29.2rem;
+
+    @include media-query(48.0625em) {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      height: 100%;
+    }
+  }
+}
+
+.schedule {
+  background-color: var(--clr-b-100);
+  box-shadow: 0px 2px 8px 0px var(--clr-a-015);
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow: hidden;
+}

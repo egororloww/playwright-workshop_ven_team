@@ -1,0 +1,125 @@
+@import '../../../../../assets/styles/mixins';
+
+.drawer {
+  &:global(.EZDrawer__container) {
+    background: var(--background-100);
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1.5rem;
+    gap: 1.5rem;
+    height: 100svh !important;
+  }
+}
+
+.wrapper {
+  @include small-screen() {
+    display: none;
+  }
+}
+
+.header {
+  padding: 0.3875rem 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  position: relative;
+  z-index: 100;
+  background-color: var(--background-088);
+  backdrop-filter: blur(10px);
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: calc(50% - 40px);
+    height: 0.0625rem;
+    top: 100%;
+    background-image: linear-gradient(90deg, hsla(0, 0%, 100%, 0) 0%, hsla(0, 0%, 100%, 0.39) 100%);
+    filter: blur(1px);
+  }
+  &::before {
+    left: 0;
+  }
+  &::after {
+    right: 0;
+    transform: scaleX(-1);
+  }
+  .box {
+    width: 80px;
+    height: 15px;
+    background-image: url(../../../../assets/icons/border.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: calc(100% - 1px);
+    left: 50%;
+    transform: translateX(-50%);
+    filter: blur(1px);
+  }
+}
+.close {
+  justify-self: start;
+  margin-left: 1rem;
+}
+.logo {
+  position: relative;
+  justify-self: center;
+  margin-bottom: -1.2rem;
+  width: 5.76925rem;
+}
+.navigation {
+  padding: 1.5rem 1rem 0;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  overflow-y: auto;
+  margin-bottom: auto;
+}
+
+.link {
+  padding: 0.6875rem 1rem;
+  height: 3rem;
+  text-align: center;
+  position: relative;
+  span {
+    display: inline-block;
+    width: max-content;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    background-image: var(--text-gradient);
+    @include text-bgr-clip();
+    transition: background-image var(--main-transition);
+  }
+
+  &::after {
+    opacity: 0;
+    content: '';
+    position: absolute;
+    display: block;
+    height: 1px;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    background-image: linear-gradient(90deg, hsla(36, 99%, 45%, 0), hsla(36, 99%, 45%, 1), hsla(36, 99%, 45%, 0));
+    transition: opacity var(--main-transition);
+  }
+  &:hover,
+  &:global(.active),
+  &:active {
+    &::after {
+      opacity: 1;
+    }
+  }
+  &:active {
+    span {
+      background-image: linear-gradient(90deg, var(--color-a-080) 0%, var(--color-a-080) 100%);
+    }
+  }
+  &:global(.active) {
+    span {
+      background-image: linear-gradient(90deg, var(--color-a-100) 0%, var(--color-a-100) 100%);
+    }
+  }
+}

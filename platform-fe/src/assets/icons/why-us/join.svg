@@ -1,0 +1,29 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="EFG_Join_Elite_icon 1">
+        <path id="Vector" d="M28 6.6001H20H12L2.30005 16.2001L20 33.9001L37.7001 16.2001L28 6.6001Z"
+            stroke="url(#paint0_linear_1544_15156)" stroke-miterlimit="10" stroke-linecap="round"
+            stroke-linejoin="round" />
+        <path id="Vector_2" d="M12 6.6001L20.1 15.6001L28 6.6001" stroke="url(#paint1_linear_1544_15156)"
+            stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+        <path id="Vector_3" d="M6.59998 16.2L20 19L33.4 16.2" stroke="#E98C00" stroke-width="2" stroke-miterlimit="10"
+            stroke-linecap="round" stroke-linejoin="round" />
+        <path id="Vector_4" d="M20 33.4V22.5" stroke="url(#paint2_linear_1544_15156)" stroke-miterlimit="10"
+            stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+    <defs>
+        <linearGradient id="paint0_linear_1544_15156" x1="20" y1="34.4094" x2="20" y2="6.0676"
+            gradientUnits="userSpaceOnUse">
+            <stop stop-color="#3E3E3E" />
+            <stop offset="1" stop-color="white" />
+        </linearGradient>
+        <linearGradient id="paint1_linear_1544_15156" x1="20" y1="16.1384" x2="20" y2="6.0676"
+            gradientUnits="userSpaceOnUse">
+            <stop stop-color="#3E3E3E" />
+            <stop offset="1" stop-color="white" />
+        </linearGradient>
+        <linearGradient id="paint2_linear_1544_15156" x1="20" y1="8" x2="20" y2="6.0676" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#3E3E3E" />
+            <stop offset="1" stop-color="white" />
+        </linearGradient>
+    </defs>
+</svg>

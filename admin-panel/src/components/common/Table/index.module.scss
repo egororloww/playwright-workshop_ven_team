@@ -1,0 +1,41 @@
+@import '../../../assets/styles/mixins';
+.table {
+  overflow: hidden;
+  box-shadow: 0px 2px 8px 0px var(--clr-a-015);
+
+  & :global(.table) {
+    @include scrollbar();
+
+    & :global(.thead) {
+      & :global(.tr-header) {
+        & :global(.th) {
+          padding: 0.75rem;
+          border-bottom: 1px solid var(--clr-a-010);
+          div {
+            color: var(--clr-a-040);
+            font-size: 0.75rem;
+            font-weight: 600;
+            line-height: 120%;
+          }
+        }
+      }
+    }
+    & :global(.tbody) {
+      & :global(.tr-body) {
+        & :global(.td) {
+          padding: 0.9375rem 0.75rem;
+
+          div {
+            color: var(--clr-a-080);
+            font-size: 0.875rem;
+            font-weight: 500;
+            line-height: normal;
+          }
+        }
+        &:global(.tr:not(:last-of-type) > .td) {
+          border-bottom: 1px solid var(--clr-a-020);
+        }
+      }
+    }
+  }
+}

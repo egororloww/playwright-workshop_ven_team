@@ -1,0 +1,19 @@
+@import '../../../../../assets/styles/mixins';
+
+.list {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 2.5rem;
+  justify-items: center;
+  position: relative;
+
+  @media (min-width: 37.5625em) {
+    display: none;
+  }
+
+  &__item {
+    justify-items: center;
+    max-width: 17.5rem;
+    justify-self: center;
+  }
+}

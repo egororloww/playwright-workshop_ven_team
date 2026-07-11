@@ -1,0 +1,62 @@
+@import '../../../../assets/styles/mixins';
+
+.body {
+  --animation-timing-function: cubic-bezier(0, 0, 1, 0);
+  ---animation-duration: 300ms;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  margin-bottom: 0;
+  position: relative;
+  z-index: 1;
+  margin-top: 1.5rem;
+  @media (min-width: 30.0625em) {
+    margin-bottom: -10.25%;
+  }
+  svg {
+    max-width: 100%;
+    height: auto;
+  }
+  & :global(#ELITE_FLEET_TEXT) {
+    opacity: 0;
+    will-change: opacity;
+    animation: fadeIn var(---animation-duration) ease-in 650ms forwards;
+  }
+
+  & :global(#GROUP_TEXT) {
+    opacity: 0;
+    will-change: opacity;
+    animation: fadeIn .4s ease-in 1100ms forwards;
+  }
+}
+
+.image {
+  will-change: opacity;
+  position: relative;
+  &__default {
+    opacity: 1;
+    animation: fadeIn 0 1400ms reverse forwards;
+  }
+  &__active {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    animation: fadeIn .4s ease-in 1100ms forwards;
+    z-index: 1;
+  }
+}
+
+@include keyframes(fadeIn) {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

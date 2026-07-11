@@ -1,0 +1,123 @@
+.listing_images {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 24px;
+  @media(max-width: 560px) {
+    flex-direction: column;
+  }
+  .error-text {
+    position: static !important;
+  }
+  &_item {
+    .error-text {
+      position: static !important;
+    }
+
+    @media(max-width: 480px) {
+      width: 100%;
+    }
+  }
+  &_title {
+    margin-bottom: 0.25rem;
+  }
+
+  .others_img_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    flex: 1;
+    @media(max-width: 560px) {
+      flex-direction: column;
+    }
+  }
+}
+
+.others_container {
+  @media(max-width: 480px) {
+    width: 100%;
+  }
+}
+
+.field {
+  position: relative;
+  padding-bottom: 0;
+  @media(max-width: 480px) {
+    width: 100%;
+  }
+  &_error {
+    position: static !important;
+  }
+}
+
+.image_preview {
+  position: relative;
+  width: 167px;
+  height: 104px;
+  border: 1px solid var(--clr-a-030);
+  aspect-ratio: 2.057 / 1;
+  @media(max-width: 480px) {
+    width: 100%;
+    height: auto;
+    max-width: 480px;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.button {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid var(--clr-e-100);
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.25);
+  &_back {
+    svg {
+      margin-right: 15px;
+    }
+
+    @media(max-width: 480px) {
+      font-size: 0;
+      padding: 2px;
+    }
+  }
+  svg {
+    display: flex;
+    width: 1.0625rem;
+    height: 1.0625rem;
+    fill: #E98C00;
+  }
+}
+
+.button_group {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 24px;
+  margin-top: 16px;
+  @media(max-width: 480px) {
+    gap: 5px;
+  }
+}
+
+.button_cancel {
+  margin-left: auto;
+}
+
+.image_tooltip {
+  font-size: 14px;
+  color: var(--clr-a-060);
+  margin-top: 4px;
+}

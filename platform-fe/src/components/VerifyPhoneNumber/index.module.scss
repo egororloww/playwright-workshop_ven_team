@@ -1,0 +1,50 @@
+.modal {
+  display: grid;
+  grid-template-columns: minmax(0, 33.25rem);
+}
+
+.title {
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.info {
+  color: var(--color-a-080);
+  font-size: 1rem;
+  margin-bottom: .5rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.code_field {
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+.info_btn {
+  align-self: center;
+}
+
+.text {
+  color: var(--color-a-100);
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.button {
+  color: var(--primary);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
