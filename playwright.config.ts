@@ -12,7 +12,9 @@ export default defineConfig({
   fullyParallel: false,
   retries: isCI ? 2 : 0,
   workers: isCI ? 1 : undefined,
-  reporter: isCI ? [['html', { open: 'never' }], ['github']] : [['html', { open: 'never' }]],
+  reporter: isCI
+    ? [['html', { open: 'never' }], ['github'], ['allure-playwright']]
+    : [['html', { open: 'never' }], ['allure-playwright']],
   timeout: 60000,
   expect: { timeout: 10000 },
   use: {

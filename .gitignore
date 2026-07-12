@@ -9,6 +9,8 @@ node_modules/
 playwright-utils/.auth/
 test-results/
 playwright-report/
+allure-results/
+allure-report/
 
 # Local env files (keep .env.test.example committed)
 .env
