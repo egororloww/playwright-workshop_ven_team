@@ -6,6 +6,7 @@
   "scripts": {
     "test:e2e": "playwright test --grep-invert @lighthouse",
     "test:e2e:ui": "playwright test --ui",
+    "test:api": "playwright test --project=api",
     "test:lighthouse": "playwright test --grep @lighthouse --workers=1"
   },
   "repository": {
@@ -21,8 +22,10 @@
   },
   "homepage": "https://github.com/egororloww/playwright-workshop_ven_team#readme",
   "devDependencies": {
+    "@ghostery/adblocker-playwright": "^2.18.1",
     "@playwright/test": "^1.61.1",
     "@types/node": "^26.1.1",
+    "cross-fetch": "^4.1.0",
     "dotenv": "^17.4.2",
     "playwright-lighthouse": "^4.0.0"
   }

@@ -13,6 +13,7 @@ declare global {
       ADMIN_BASE_URL?: string
       ADMIN_EMAIL?: string
       ADMIN_PASSWORD?: string
+      API_BASE_URL?: string
     }
   }
 }
