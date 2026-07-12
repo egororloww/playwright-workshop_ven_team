@@ -4,10 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:e2e": "playwright test --grep-invert @lighthouse",
+    "test:e2e": "playwright test --grep-invert \"@lighthouse|@performance\"",
     "test:e2e:ui": "playwright test --ui",
     "test:api": "playwright test --project=api",
-    "test:lighthouse": "playwright test --grep @lighthouse --workers=1"
+    "test:lighthouse": "playwright test --grep @lighthouse --workers=1",
+    "test:performance": "playwright test --grep @performance --workers=1",
+    "test:load": "node load-tests/run.js"
   },
   "repository": {
     "type": "git",
