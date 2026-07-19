@@ -1,11 +1,10 @@
-import { test, expect } from '@playwright/test'
+import { test } from '../../playwright-utils/fixtures'
 
 test.describe('Admin auth guard', () => {
-  test('Admin cannot view protected pages once the session is cleared', async ({ page }) => {
-    await page.goto('/')
-    await expect(page.getByRole('heading', { name: 'Admin Panel' })).toBeVisible()
-    await page.evaluate(() => localStorage.clear())
-    await page.reload()
-    await expect(page.getByRole('heading', { name: 'Sign In' })).toBeVisible()
+  test('Admin cannot view protected pages once the session is cleared', async ({ pom }) => {
+    await pom.adminHomePage.open()
+    await pom.adminHomePage.expectAdminPanelVisible()
+    await pom.adminHomePage.clearSessionAndReload()
+    await pom.adminHomePage.expectSignInHeadingVisible()
   })
 })

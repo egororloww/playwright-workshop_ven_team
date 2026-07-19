@@ -1,6 +1,7 @@
-import { test as base, type Page } from '@playwright/test'
+import { type Page } from '@playwright/test'
 import { PlaywrightBlocker } from '@ghostery/adblocker-playwright'
 import fetch from 'cross-fetch'
+import { test as base, expect } from './index'
 
 type AdblockFixtures = {
   page: Page
@@ -14,4 +15,4 @@ export const test = base.extend<AdblockFixtures>({
   },
 })
 
-export { expect } from '@playwright/test'
+export { expect }

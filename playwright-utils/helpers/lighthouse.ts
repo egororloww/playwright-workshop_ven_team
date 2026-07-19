@@ -3,7 +3,7 @@ import { playAudit } from 'playwright-lighthouse'
 
 const LIGHTHOUSE_PORT = 9222
 
-type LighthouseThresholds = {
+export type LighthouseThresholds = {
   performance: number
   accessibility: number
   'best-practices': number

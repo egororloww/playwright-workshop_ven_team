@@ -1,8 +1,8 @@
-import { test, expect } from '@playwright/test'
+import { test } from '../../playwright-utils/fixtures'
 
 test.describe('Admin smoke', () => {
-  test('Authenticated session is active', async ({ page }) => {
-    await page.goto('/')
-    await expect(page.getByRole('heading', { name: 'Admin Panel' })).toBeVisible()
+  test('Authenticated session is active', async ({ pom }) => {
+    await pom.adminHomePage.open()
+    await pom.adminHomePage.expectAdminPanelVisible()
   })
 })
