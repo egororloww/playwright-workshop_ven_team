@@ -5,14 +5,14 @@ This repository contains a Playwright end-to-end test suite covering guest, user
 
 ## My Contributions
 
-| PR / Branch | Description | Test Cases Added |
+| Branch | Description | Test Cases Added |
 |---|---|---|
-| **#2** `feat/guest-login-coverage-plan` | Guest Sign In modal happy-path test from the header, plus a coverage plan mapping remaining login/booking scenarios still needing tests | 1 |
-| **#3** `feat/performance-coverage` | Navigation Timing API budget checks across guest (home, our-cars, about-us, booking), user (profile, booking, T&C, payment), and admin (cars, bookings) pages | 10 |
-| **#4** `feat/lighthouse-coverage` | Lighthouse audits (performance, accessibility, best practices, SEO) across guest, user, and admin pages, tagged `@lighthouse` for isolated runs | 4 |
+| `feat/guest-login-coverage-plan` | Guest Sign In modal happy-path test from the header, plus a coverage plan mapping remaining login/booking scenarios still needing tests | 1 |
+| `feat/performance-coverage` | Navigation Timing API budget checks across guest (home, our-cars, about-us, booking), user (profile, booking, T&C, payment), and admin (cars, bookings) pages | 10 |
+| `feat/lighthouse-coverage` | Lighthouse audits (performance, accessibility, best practices, SEO) across guest, user, and admin pages, tagged `@lighthouse` for isolated runs | 4 |
 | `feat/pom-refactor` | Refactored guest/user/admin coverage into a Page Object Model: 11 page/component classes, a `PageManager`, and a `pom` fixture (with the ad-blocker fixture composed on top) | 0 (architecture only) |
 
-**Total new test cases added: 15**, plus an architectural refactor improving maintainability of the suite going forward.
+**Total new test cases added: 15**, plus an architectural refactor into a Page Object Model for long-term maintainability of the suite.
 
 ## What This Demonstrates
 - Identifying and closing real coverage gaps (guest login, performance budgets, accessibility) in an existing framework rather than starting from scratch
